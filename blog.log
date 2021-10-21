@@ -1,0 +1,24 @@
+2021-10-06 22:15:30.506  INFO 28545 --- [restartedMain] f.l.blogserver.BlogServerApplication     : Starting BlogServerApplication using Java 16.0.1 on 192.168.0.3 with PID 28545 (/Users/lianyongsheng/IdeaProjects/blog-server/target/classes started by lianyongsheng in /Users/lianyongsheng/IdeaProjects/blog-server)
+2021-10-06 22:15:30.507  INFO 28545 --- [restartedMain] f.l.blogserver.BlogServerApplication     : No active profile set, falling back to default profiles: default
+2021-10-06 22:15:30.583  INFO 28545 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-10-06 22:15:30.585  INFO 28545 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-10-06 22:15:31.658  INFO 28545 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-10-06 22:15:31.660  INFO 28545 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-10-06 22:15:31.679  INFO 28545 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2021-10-06 22:15:31.838  WARN 28545 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[fun.lianys.blogserver.dao]' package. Please check your configuration.
+2021-10-06 22:15:32.416  INFO 28545 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-10-06 22:15:32.422  INFO 28545 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-10-06 22:15:32.422  INFO 28545 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-06 22:15:32.488  INFO 28545 --- [restartedMain] o.a.c.c.C.[.[localhost].[/api/blog]      : Initializing Spring embedded WebApplicationContext
+2021-10-06 22:15:32.489  INFO 28545 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1903 ms
+2021-10-06 22:15:33.000  INFO 28545 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-10-06 22:15:33.546  INFO 28545 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 473a1596-f783-4a0e-804b-10de9050dca2
+
+2021-10-06 22:15:33.597  INFO 28545 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@54e27bad, org.springframework.security.web.context.SecurityContextPersistenceFilter@6851f4d4, org.springframework.security.web.header.HeaderWriterFilter@4c61682e, org.springframework.security.web.csrf.CsrfFilter@76654ee5, org.springframework.security.web.authentication.logout.LogoutFilter@3d23c17b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@adcc0d3, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5f087582, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5482f6c2, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@60dbe821, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58222fc1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77b96671, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6ba78693, org.springframework.security.web.session.SessionManagementFilter@1e8155b8, org.springframework.security.web.access.ExceptionTranslationFilter@680f0e74, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@d25d420]
+2021-10-06 22:15:33.714  INFO 28545 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path '/api/blog'
+2021-10-06 22:15:34.112  INFO 28545 --- [restartedMain] f.l.blogserver.BlogServerApplication     : Started BlogServerApplication in 4.154 seconds (JVM running for 5.104)
+2021-10-06 22:16:30.077  INFO 28545 --- [http-nio-8090-exec-1] o.a.c.c.C.[.[localhost].[/api/blog]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-06 22:16:30.077  INFO 28545 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-10-06 22:16:30.078  INFO 28545 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
