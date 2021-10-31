@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="fun.lianys.blogserver.dao.DictDao">
+  <resultMap id="dictResultMap" type="dict">
+    <id property="id" column="id"/>
+    <result property="key" column="key" />
+    <result property="value" column="value" />
+    <result property="description" column="description" />
+    <result property="createTime" column="create_time" />
+    <result property="updateTime" column="update_time" />
+  </resultMap>
+  <select id="listAll" resultMap="dictResultMap">
+    select `id`, `key`, `value`, `description`, `create_time`, `update_time` from dict
+  </select>
+  <select id="list" resultMap="dictResultMap">
+    select `id`, `key`, `value`, `description`, `create_time`, `update_time` from dict
+    <where>
+      <if test="keyword != null and keyword != ''">
+        ( `key` like concat(#{keyword} "%") or `value` like concat(#{keyword} "%") )
+      </if>
+    </where>
+  </select>
+</mapper>

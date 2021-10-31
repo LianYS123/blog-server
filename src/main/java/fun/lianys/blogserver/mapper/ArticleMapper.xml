@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="fun.lianys.blogserver.dao.ArticleDao">
+
+  <resultMap id="articleResultMap" type="article">
+    <id property="id" column="article_id"/>
+    <result property="articleName" column="article_name" />
+    <result property="html" column="html" />
+    <result property="raw" column="raw" />
+    <result property="cover" column="cover" />
+    <result property="createTime" column="create_time" />
+    <result property="updateTime" column="update_time" />
+    <association property="author">
+      <id property="id" column="user_id" />
+      <result property="username" column="username" />
+    </association>
+  </resultMap>
+
+  <select id="list" resultMap="articleResultMap">
+    select
+    A.id as article_id, article_name, html, raw, cover, A.create_time as create_time, A.update_time as update_time,
+     U.id as user_id, username
+    from article A left outer join user U on A.author=U.id
+    <where>
+      <if test="keyword != null and keyword != ''">
+        (
+          articleName like concat(#{keyword} "%")
+          or html like concat(#{keyword} "%")
+        )
+      </if>
+    </where>
+    <if test="order != null and orderType">
+        order by ${order} ${orderType}
+    </if>
+  </select>
+
+  <select id="findOne" resultMap="articleResultMap">
+    select
+    A.id as article_id, article_name, html, raw, cover, A.create_time as create_time, A.update_time as update_time, U.id as user_id 
+    from article A left outer join user U on A.author=U.id where A.id = #{id}
+  </select>
+
+</mapper>

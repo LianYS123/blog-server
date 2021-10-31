@@ -1,12 +1,12 @@
 
 mybatis:
   mapper-locations: classpath:**/*Mapper.xml
-  type-aliases-package: fun.lianys.blogserver.model.entity.*
+  type-aliases-package: fun.lianys.blogserver.model.entity # 包名，不是类名
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/db_lian
+    url: jdbc:mysql://localhost:3306/blog
     username: root
     password: tb1766318380
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -28,7 +28,7 @@ swagger:
 server:
   port: 8090
   servlet:
-    context-path: /api/blog
+    context-path: /api
 logging:
   file:
     name: blog.log
@@ -37,3 +37,4 @@ logging:
 file.upload.path: files/
 cos.secretId: AKIDymKbcMq2yd18yXpqa4HTVMxHK6bpmSr0
 cos.secretKey: sUpthEUTBbkcCVXImzvay4tRiiRs2wZv
+jwt.secretKey: amF2YXguY3J5cHRvLnNwZWMuU2VjcmV0S2V5U3BlY0BmYTc3YzE0ZQ==

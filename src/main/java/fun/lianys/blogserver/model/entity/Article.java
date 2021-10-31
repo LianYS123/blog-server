@@ -11,4 +11,8 @@ public class Article {
     private String articleName;
     private String html;
     private String raw;
+    private String cover;
+    private User author;
+    private Integer createTime;
+    private Integer updateTime;
 }
