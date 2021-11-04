@@ -9,6 +9,7 @@ import fun.lianys.blogserver.utils.Utils;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -51,6 +52,10 @@ public class ArticleController {
         article.setUpdateTime(utils.getCurrentTime());
         Integer id = articleService.update(article);
         return Result.ofSuccess(id);
+    }
+    @DeleteMapping("/{id}")
+    public Result delete(@PathVariable Integer id) {
+        return Result.ofSuccess(articleService.delete(id));
     }
 
 }

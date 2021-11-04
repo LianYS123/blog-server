@@ -6,6 +6,7 @@ import lombok.Data;
 
 @Data
 public class AddArticleDto {
+    private Integer id;
     private Integer author; // 作者
     @NotNull
     private String articleName;

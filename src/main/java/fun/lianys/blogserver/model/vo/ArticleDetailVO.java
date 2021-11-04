@@ -1,5 +1,9 @@
 package fun.lianys.blogserver.model.vo;
 
+
+import java.util.List;
+
+import fun.lianys.blogserver.model.dto.TagDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,4 +22,5 @@ public class ArticleDetailVO {
     private String authorName; 
     private Integer createTime;
     private Integer updateTime;
+    private List<TagDto> tags;
 }

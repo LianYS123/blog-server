@@ -17,13 +17,34 @@
       <id property="id" column="user_id" />
       <result property="username" column="username" />
     </association>
+    <collection property="tags" ofType="tag" >
+      <id property="id" column="tag_id"/>
+      <result property="tagName" column="tag_name" />
+      <result property="color" column="color" />
+    </collection>
   </resultMap>
 
   <select id="list" resultMap="articleResultMap">
     select
-    A.id as article_id, article_name, html, raw, cover, A.create_time as create_time, A.update_time as update_time,
-     U.id as user_id, username
-    from article A left outer join user U on A.author=U.id
+    A.id as article_id,
+    article_name, 
+    html,
+    raw,
+    cover,
+    A.create_time as create_time,
+    A.update_time as update_time,
+
+    U.id as user_id, 
+    U.username as username,
+
+    T.id as tag_id,
+    T.tag_name as tag_name,
+    T.color as color
+
+    from article A 
+    left outer join user U on A.author=U.id
+    left outer join article_tag AT on A.id=AT.article_id
+    left outer join tag T on AT.tag_id=T.id
     <where>
       <if test="keyword != null and keyword != ''">
         (

@@ -1,6 +1,9 @@
 package fun.lianys.blogserver.model.entity;
 
 import lombok.Data;
+
+import java.util.List;
+
 import org.apache.ibatis.type.Alias;
 
 // 数据库使用的实体类
@@ -13,6 +16,7 @@ public class Article {
     private String raw;
     private String cover;
     private User author;
+    private List<Tag> tags;
     private Integer createTime;
     private Integer updateTime;
 }

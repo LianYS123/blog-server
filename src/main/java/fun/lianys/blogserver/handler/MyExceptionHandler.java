@@ -1,6 +1,7 @@
 package fun.lianys.blogserver.handler;
 
 import fun.lianys.blogserver.common.Result;
+import fun.lianys.blogserver.exception.BaseException;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.HashMap;
@@ -45,7 +46,6 @@ public class MyExceptionHandler {
         return Result.of("1003", "缺少必填参数", null);
     }
 
-
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(BindException.class)
     @ResponseBody
@@ -59,6 +59,14 @@ public class MyExceptionHandler {
     @ResponseBody
     public Result handleUnAuthorized(SecurityException ex) {
         return Result.of("1004", ex.getMessage(), null);
+    }
+
+    @ExceptionHandler(value = BaseException.class)
+    @ResponseStatus(value = HttpStatus.BAD_REQUEST)
+    @ResponseBody
+    public Result baseExceptionHandler(BaseException exception) {
+        log.error("【Exception】:{}", exception.getMessage());
+        return Result.of(exception.getCode(), exception.getMessage(), null);
     }
 
     @ExceptionHandler(value = Exception.class)

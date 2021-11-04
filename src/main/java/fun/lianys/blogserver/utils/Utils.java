@@ -14,8 +14,8 @@ public class Utils {
   }
 
   public JwtUser getCurrentUser() {
-    JwtUser author = (JwtUser) (SecurityContextHolder.getContext().getAuthentication().getPrincipal());
-    return author;
+    JwtUser user = (JwtUser) (SecurityContextHolder.getContext().getAuthentication().getPrincipal());
+    return user;
   }
 
 }
