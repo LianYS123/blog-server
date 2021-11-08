@@ -17,4 +17,5 @@ public class AddArticleDto {
     private String raw;
     private Integer createTime;
     private Integer updateTime;
+    private Integer[] tags;
 }

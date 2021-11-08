@@ -29,14 +29,12 @@ public class TagService {
   }
 
   public PageInfo<TagDto> list(PageParamDto params) {
-
-    Page<Tag> p = PageHelper.startPage(params.getPage(), params.getPageSize());
-    tagDao.list(params);
-    List<TagDto> list = new ArrayList<>();
-    for (Tag tag : p.getResult()) {
-      list.add(convertTagToDto(tag));
-    }
-    return new PageInfo<TagDto>(list);
+    PageHelper.startPage(params.getPage(), params.getPageSize());
+    List<Tag> tagList = tagDao.list(params);
+    PageInfo pageInfo = new PageInfo(tagList);
+    List<TagDto> list = tagList.stream().map((Tag tag) -> convertTagToDto(tag)).toList();
+    pageInfo.setList(list);
+    return pageInfo;
   }
 
 

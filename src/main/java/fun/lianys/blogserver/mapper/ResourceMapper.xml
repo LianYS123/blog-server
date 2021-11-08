@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="fun.lianys.blogserver.dao.ResourceDao">
+  <resultMap id="resourceResultMap" type="resource">
+    <id property="id" column="id" />
+    <result property="resourceName" column="resource_name" />
+    <result property="src" column="src" />
+    <result property="type" column="type" />
+    <result property="size" column="size" />
+    <result property="description" column="description" />
+    <result property="createTime" column="create_time" />
+    <result property="updateTime" column="update_time" />
+  </resultMap>
+  <!-- 查询 -->
+  <select id="list" resultMap="resourceResultMap">
+    select `id`, `resource_name`, `src`, `type`, `size`, `description`, `create_time`, `update_time` from resource
+    <where>
+      <if test="keyword != null and keyword != ''">
+        ( `resource_name` like concat(#{keyword} "%") or `description` like concat(#{keyword} "%") )
+      </if>
+    </where>
+  </select>
+  <!-- 通用修改项 -->
+  <sql id="setFields">
+     `resource_name`=#{resourceName}, 
+     `src`=#{src}, 
+     `type`=#{type}, 
+     `size`=#{size}, 
+     `description`=#{description}
+  </sql>
+  <!-- 添加 -->
+  <insert id="add">
+    insert into resource set
+    <include refid="setFields"></include>
+    ,
+     `create_time`=#{createTime}, 
+     `update_time`=#{updateTime}
+  </insert>
+  <!-- 更新 -->
+  <update id="update">
+    update resource set
+    <include refid="setFields"></include>
+    ,
+     `update_time`=#{updateTime}
+     where id=#{id}
+  </update>
+  <delete id="delete">
+     delete from resource where id=#{id}
+  </delete>
+</mapper>

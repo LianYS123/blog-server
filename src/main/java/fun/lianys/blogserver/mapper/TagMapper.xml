@@ -19,7 +19,7 @@
     select `id`, `tag_name`, `color`, `description`, `create_time`, `update_time` from tag
     <where>
       <if test="keyword != null and keyword != ''">
-        ( `key` like concat(#{keyword} "%") or `value` like concat(#{keyword} "%") )
+        ( `tag_name` like concat(#{keyword} "%") or `description` like concat(#{keyword} "%") )
       </if>
     </where>
   </select>

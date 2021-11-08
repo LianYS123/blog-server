@@ -87,12 +87,25 @@ public class ArticleService {
 
   public Integer add(AddArticleDto article) {
     articleDao.add(article);
-    return article.getId();
+    Integer id = article.getId();
+    updateTags(id, article.getTags());
+    return id;
   }
 
   public Integer update(EditArticleDto article) {
     articleDao.update(article);
-    return article.getId();
+    Integer id = article.getId();
+    updateTags(id, article.getTags());
+    return id;
+  }
+
+  // 批量更新标签
+  public Integer updateTags(Integer id, Integer[] tags) {
+    if (tags != null && tags.length != 0) {
+      return articleDao.updateTagBatch(id, tags);
+    } else {
+      return 0;
+    }
   }
 
   public Integer delete(Integer id) {

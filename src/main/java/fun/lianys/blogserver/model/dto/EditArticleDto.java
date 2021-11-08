@@ -15,4 +15,5 @@ public class EditArticleDto {
     @NotNull
     private String raw;
     private Integer updateTime;
+    private Integer[] tags;
 }

@@ -29,4 +29,6 @@ public interface ArticleDao {
 
     @Delete("delete from article where id=#{id}")
     public Integer delete(Integer id);
+
+    public Integer updateTagBatch(Integer articleId, Integer[] tags);
 }

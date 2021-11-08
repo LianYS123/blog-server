@@ -12,51 +12,46 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import fun.lianys.blogserver.common.Result;
-import fun.lianys.blogserver.model.dto.TagDto;
+import fun.lianys.blogserver.model.dto.ResourceDto;
 import fun.lianys.blogserver.model.dto.PageParamDto;
-import fun.lianys.blogserver.service.TagService;
+import fun.lianys.blogserver.service.ResourceService;
 import fun.lianys.blogserver.utils.Utils;
 
 // 数据字典
 @RestController
-@RequestMapping("/tag")
-public class TagController {
+@RequestMapping("/resource")
+public class ResourceController {
 
   @Autowired
-  TagService tagService;
+  ResourceService resourceService;
 
   @Autowired
   Utils utils;
 
-  @GetMapping
-  public Result getAllTags() {
-    return Result.ofSuccess(tagService.listAll());
-  }
-
   @GetMapping("/list")
   public Result list(@Validated PageParamDto dictQuery) {
-    return Result.ofSuccess(tagService.list(dictQuery));
+    return Result.ofSuccess(resourceService.list(dictQuery));
   }
 
   @PostMapping
-  public Result add(@Validated @RequestBody TagDto tag) {
-    tag.setCreateTime(utils.getCurrentTime());
-    tag.setUpdateTime(utils.getCurrentTime());
-    Integer id = tagService.add(tag);
+  public Result add(@Validated @RequestBody ResourceDto resource) {
+    resource.setCreateTime(utils.getCurrentTime());
+    resource.setUpdateTime(utils.getCurrentTime());
+    Integer id = resourceService.add(resource);
     return Result.ofSuccess(id);
   }
 
   @PutMapping("/{id}")
-  public Result update(@PathVariable(required = true) Integer id, @Validated @RequestBody TagDto tag) {
-    tag.setId(id);
-    tag.setUpdateTime(utils.getCurrentTime());
-    tagService.update(tag);
+  public Result update(@PathVariable(required = true) Integer id, @Validated @RequestBody ResourceDto resource) {
+    resource.setId(id);
+    resource.setUpdateTime(utils.getCurrentTime());
+    resourceService.update(resource);
     return Result.ofSuccess(id);
   }
 
   @DeleteMapping("/{id}")
   public Result delete(@PathVariable(required = true) Integer id) {
-    return Result.ofSuccess(tagService.delete(id));
+    return Result.ofSuccess(resourceService.delete(id));
   }
 
 }

@@ -1,12 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper
-        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="fun.lianys.blogserver.dao.ArticleDao">
 
   <resultMap id="articleResultMap" type="article">
-    <id property="id" column="article_id"/>
+    <id property="id" column="article_id" />
     <result property="articleName" column="article_name" />
     <result property="html" column="html" />
     <result property="raw" column="raw" />
@@ -17,14 +15,14 @@
       <id property="id" column="user_id" />
       <result property="username" column="username" />
     </association>
-    <collection property="tags" ofType="tag" >
-      <id property="id" column="tag_id"/>
+    <collection property="tags" ofType="tag">
+      <id property="id" column="tag_id" />
       <result property="tagName" column="tag_name" />
       <result property="color" column="color" />
     </collection>
   </resultMap>
 
-  <select id="list" resultMap="articleResultMap">
+  <sql id="selectArticle">
     select
     A.id as article_id,
     article_name, 
@@ -45,6 +43,10 @@
     left outer join user U on A.author=U.id
     left outer join article_tag AT on A.id=AT.article_id
     left outer join tag T on AT.tag_id=T.id
+  </sql>
+
+  <select id="list" resultMap="articleResultMap">
+    <include refid="selectArticle"></include>
     <where>
       <if test="keyword != null and keyword != ''">
         (
@@ -59,9 +61,19 @@
   </select>
 
   <select id="findOne" resultMap="articleResultMap">
-    select
-    A.id as article_id, article_name, html, raw, cover, A.create_time as create_time, A.update_time as update_time, U.id as user_id 
-    from article A left outer join user U on A.author=U.id where A.id = #{id}
+    <include refid="selectArticle"></include>
+    where A.id = #{id}
   </select>
+
+
+  <update id="updateTagBatch">
+    insert into article_tag (article_id, tag_id)
+    values
+    <foreach collection="tags" item="item" index="index" separator=",">
+        ( #{articleId}, #{item} )
+    </foreach>
+    ON DUPLICATE KEY UPDATE article_id = VALUES(article_id), tag_id = VALUES(tag_id);
+  </update>
+
 
 </mapper>
