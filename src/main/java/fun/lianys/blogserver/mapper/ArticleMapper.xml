@@ -3,6 +3,26 @@
 
 <mapper namespace="fun.lianys.blogserver.dao.ArticleDao">
 
+
+  <resultMap id="userResultMap" type="user">
+    <id property="id" column="user_id" />
+    <result property="username" column="username" />
+  </resultMap>
+  <resultMap id="tagResultMap" type="tag">
+    <id property="id" column="tag_id" />
+    <result property="tagName" column="tag_name" />
+    <result property="color" column="tag_color" />
+  </resultMap>
+
+  <select id="selectTag" resultMap="tagResultMap">
+    select 
+    T.id as tag_id, 
+    T.tag_name as tag_name, 
+    T.color as tag_color
+    from tag T left outer join article_tag AT on AT.tag_id=T.id
+    where AT.article_id = #{article_id}
+  </select>
+
   <resultMap id="articleResultMap" type="article">
     <id property="id" column="article_id" />
     <result property="articleName" column="article_name" />
@@ -11,15 +31,10 @@
     <result property="cover" column="cover" />
     <result property="createTime" column="create_time" />
     <result property="updateTime" column="update_time" />
-    <association property="author">
-      <id property="id" column="user_id" />
-      <result property="username" column="username" />
-    </association>
-    <collection property="tags" ofType="tag">
-      <id property="id" column="tag_id" />
-      <result property="tagName" column="tag_name" />
-      <result property="color" column="color" />
-    </collection>
+
+    <association property="author" resultMap="userResultMap" />
+
+    <collection property="tags" column="article_id" ofType="tag" select="selectTag" />
   </resultMap>
 
   <sql id="selectArticle">
@@ -33,16 +48,16 @@
     A.update_time as update_time,
 
     U.id as user_id, 
-    U.username as username,
+    U.username as username
 
-    T.id as tag_id,
+    <!-- T.id as tag_id,
     T.tag_name as tag_name,
-    T.color as color
+    T.color as tag_color -->
 
     from article A 
     left outer join user U on A.author=U.id
-    left outer join article_tag AT on A.id=AT.article_id
-    left outer join tag T on AT.tag_id=T.id
+    <!-- left outer join article_tag AT on A.id=AT.article_id -->
+    <!-- left outer join tag T on AT.tag_id=T.id -->
   </sql>
 
   <select id="list" resultMap="articleResultMap">
@@ -74,6 +89,5 @@
     </foreach>
     ON DUPLICATE KEY UPDATE article_id = VALUES(article_id), tag_id = VALUES(tag_id);
   </update>
-
 
 </mapper>

@@ -77,6 +77,7 @@ public class ArticleService {
     for (Article a : p.getResult()) {
       voList.add(convertArticleToArticleVO(a));
     }
+    System.out.println(voList.stream().map((ArticleVO vo) -> vo.getArticleName()).toList());
     return new PageInfo<ArticleVO>(voList);
   }
 
