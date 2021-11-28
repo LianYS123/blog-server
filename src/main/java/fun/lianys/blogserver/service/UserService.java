@@ -7,22 +7,23 @@ import org.springframework.stereotype.Service;
 import fun.lianys.blogserver.dao.UserDao;
 import fun.lianys.blogserver.exception.BaseException;
 import fun.lianys.blogserver.model.dto.UserInfoDto;
-import fun.lianys.blogserver.model.entity.JwtUser;
 import fun.lianys.blogserver.model.entity.User;
 import fun.lianys.blogserver.model.vo.UserInfoVO;
+import fun.lianys.blogserver.utils.CurrentUserUtils;
 import fun.lianys.blogserver.utils.Utils;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @Service
+@Slf4j
+@RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class UserService {
 
-  @Autowired
-  UserDao userDao;
+  private final UserDao userDao;
 
-  @Autowired
-  Utils utils;
+  private final PasswordEncoder encoder;
 
-  @Autowired
-  PasswordEncoder encoder;
+  private final CurrentUserUtils currentUserUtils;
 
   private UserInfoVO user2uservo(User user) {
     UserInfoVO vo = new UserInfoVO(user.getId(), user.getUsername(), user.getAvatar(), user.getCreateTime(),
@@ -36,27 +37,41 @@ public class UserService {
   }
 
   public void updateUserInfo(UserInfoDto dto) {
-    Integer id = utils.getCurrentUser().getId();
-    dto.setUpdateTime(utils.getCurrentTime());
+    Integer id = currentUserUtils.getCurrent().getId();
+    dto.setUpdateTime(Utils.getCurrentTime());
     dto.setId(id);
     userDao.updateUserInfo(dto);
   }
 
+  public User matchUser(String username, String password){
+    User user = userDao.getUserByName(username);
+    if(user == null) {
+      return null;
+    }
+    Boolean matched = encoder.matches(password, user.getPassword());
+    if(matched) {
+      return user;
+    }
+    return null;
+  }
+
   public void updatePassword(String oldPassword, String newPassword) {
-    JwtUser user = utils.getCurrentUser();
+    String username = currentUserUtils.getCurrent().getUsername();
+    User user = userDao.getUserByName(username);
     Boolean matched = encoder.matches(oldPassword, user.getPassword());
     if (matched) {
       userDao.updatePassword(user.getId(), encoder.encode(newPassword));
     } else {
       throw new BaseException("1111", "密码错误");
     }
-    // Authentication auth = new
-    // UsernamePasswordAuthenticationToken(user.getUsername(), oldPassword); //
-    // 生成auth token
-    // Authentication authed = authenticationManager.authenticate(auth); // 校验
-    // if (len == 0) {
-    // throw new BaseException("1111", "密码错误");
-    // }
+
+  }
+
+  public User loadUserByUsername(String username) {
+    User user = userDao.getUserByName(username);
+    log.info(user.toString());
+
+    return user;
   }
 
 }

@@ -11,45 +11,49 @@ import io.jsonwebtoken.security.Keys;
 import io.jsonwebtoken.security.SignatureException;
 import lombok.extern.slf4j.Slf4j;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import fun.lianys.blogserver.model.entity.JwtUser;
+import fun.lianys.blogserver.config.SecurityConstants;
+import fun.lianys.blogserver.model.dto.TokenUser;
+import fun.lianys.blogserver.model.entity.User;
 
 import java.security.Key;
 import java.util.Date;
 
 import javax.crypto.SecretKey;
-import javax.servlet.http.HttpServletRequest;
 
 @Component
 @Slf4j
 public class JwtUtils {
     static SecretKey key = Keys.secretKeyFor(SignatureAlgorithm.HS256); // or HS384 or HS512
 
-    @Value("${jwt.secretKey}")
-    private String secretKey;
+    // @Value("${jwt.secretKey}")
+    private static String secretKey = SecurityConstants.JWT_SECRET_KEY;
 
     /**
      * token 过期时间, 单位: s. 这个值表示 7 天
      */
-    private final long TOKEN_EXPIRED_TIME = 7 * 24 * 60 * 60 * 1000;
+    private static long TOKEN_EXPIRED_TIME = 7 * 24 * 60 * 60 * 1000;
 
-    public String createJwt(JwtUser user) {
+    public static String createJwt(User user) {
         Key key = Keys.hmacShaKeyFor(Decoders.BASE64.decode(secretKey));
         Date exp = new Date(System.currentTimeMillis() + TOKEN_EXPIRED_TIME);
-        String jwt = Jwts.builder().setIssuer("lian'blog").setSubject(user.getUsername()).setExpiration(exp)
+        String jwt = Jwts.builder().setIssuer("lian'blog").setSubject(user.getUsername()).setId(user.getId().toString())
+                .setExpiration(exp)
                 .signWith(key).compact();
         return jwt;
     }
 
-    public String parseJwt(String jws, HttpServletRequest request) {
+    public static TokenUser parseJwt(String jws) {
         String TOKEN_EXPIRED = "token已过期";
         String TOKEN_PARSE_ERROR = "token解析错误";
         try {
             Key key = Keys.hmacShaKeyFor(Decoders.BASE64.decode(secretKey));
             Claims claims = Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(jws).getBody();
-            return claims.getSubject();
+            String username = claims.getSubject();
+            String id = claims.getId();
+            TokenUser tokenUser = new TokenUser(username, Integer.parseInt(id));
+            return tokenUser;
         } catch (ExpiredJwtException e) {
             log.error("Token 已过期");
             throw new SecurityException(TOKEN_EXPIRED);

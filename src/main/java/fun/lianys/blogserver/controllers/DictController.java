@@ -26,9 +26,6 @@ public class DictController {
   @Autowired
   DictService dictService;
 
-  @Autowired
-  Utils utils;
-
   @GetMapping
   public Result getAllDicts() {
     return Result.ofSuccess(dictService.listAll());
@@ -41,15 +38,15 @@ public class DictController {
 
   @PostMapping
   public Result add(@Validated @RequestBody AddDictDto dict) {
-    dict.setCreateTime(utils.getCurrentTime());
-    dict.setUpdateTime(utils.getCurrentTime());
+    dict.setCreateTime(Utils.getCurrentTime());
+    dict.setUpdateTime(Utils.getCurrentTime());
     Integer id = dictService.add(dict);
     return Result.ofSuccess(id);
   }
 
   @PutMapping
   public Result update(@Validated @RequestBody EditDictDto dict) {
-    dict.setUpdateTime(utils.getCurrentTime());
+    dict.setUpdateTime(Utils.getCurrentTime());
     Integer id = dictService.update(dict);
     return Result.ofSuccess(id);
   }

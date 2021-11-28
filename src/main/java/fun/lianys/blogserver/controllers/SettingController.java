@@ -16,9 +16,6 @@ public class SettingController {
   @Autowired
   DictService dictService;
 
-  @Autowired
-  Utils utils;
-
   @GetMapping
   public Result getAll() {
     return Result.ofSuccess(null);

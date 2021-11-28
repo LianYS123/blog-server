@@ -69,7 +69,7 @@
           or html like concat(#{keyword} "%")
         )
       </if>
-      and (A.status!="private" or A.status is null)
+      <!-- and (A.status!="private" or A.status is null) -->
     </where>
     <if test="order != null and orderType">
         order by ${order} ${orderType}

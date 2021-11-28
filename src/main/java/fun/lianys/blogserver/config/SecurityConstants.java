@@ -15,6 +15,7 @@ public final class SecurityConstants {
      * rememberMe 为 true 的时候过期时间是7天
      */
     public static final long EXPIRATION_REMEMBER = 60 * 60 * 24 * 7L;
+    public static final String JWT_SECRET_KEY = "amF2YXguY3J5cHRvLnNwZWMuU2VjcmV0S2V5U3BlY0BmYTc3YzE0ZQ==";
 
     // JWT token defaults
     public static final String TOKEN_HEADER = "Authorization";

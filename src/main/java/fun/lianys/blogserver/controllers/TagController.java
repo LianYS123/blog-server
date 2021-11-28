@@ -25,9 +25,6 @@ public class TagController {
   @Autowired
   TagService tagService;
 
-  @Autowired
-  Utils utils;
-
   @GetMapping
   public Result getAllTags() {
     return Result.ofSuccess(tagService.listAll());
@@ -40,8 +37,8 @@ public class TagController {
 
   @PostMapping
   public Result add(@Validated @RequestBody TagDto tag) {
-    tag.setCreateTime(utils.getCurrentTime());
-    tag.setUpdateTime(utils.getCurrentTime());
+    tag.setCreateTime(Utils.getCurrentTime());
+    tag.setUpdateTime(Utils.getCurrentTime());
     Integer id = tagService.add(tag);
     return Result.ofSuccess(id);
   }
@@ -49,7 +46,7 @@ public class TagController {
   @PutMapping("/{id}")
   public Result update(@PathVariable(required = true) Integer id, @Validated @RequestBody TagDto tag) {
     tag.setId(id);
-    tag.setUpdateTime(utils.getCurrentTime());
+    tag.setUpdateTime(Utils.getCurrentTime());
     tagService.update(tag);
     return Result.ofSuccess(id);
   }

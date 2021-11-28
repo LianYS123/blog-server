@@ -3,7 +3,6 @@ package fun.lianys.blogserver.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 
@@ -16,25 +15,25 @@ import fun.lianys.blogserver.model.dto.AddArticleDto;
 import fun.lianys.blogserver.model.dto.ArticleQueryDto;
 import fun.lianys.blogserver.model.dto.EditArticleDto;
 import fun.lianys.blogserver.model.dto.TagDto;
+import fun.lianys.blogserver.model.dto.TokenUser;
 import fun.lianys.blogserver.model.entity.Article;
-import fun.lianys.blogserver.model.entity.JwtUser;
 import fun.lianys.blogserver.model.entity.Tag;
 import fun.lianys.blogserver.model.vo.ArticleDetailVO;
 import fun.lianys.blogserver.model.vo.ArticleVO;
 import fun.lianys.blogserver.utils.ArticleUtils;
-import fun.lianys.blogserver.utils.Utils;
+import fun.lianys.blogserver.utils.CurrentUserUtils;
+import lombok.RequiredArgsConstructor;
 
 @Service
+@RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class ArticleService {
 
-  @Autowired
-  ArticleDao articleDao;
+  private final ArticleDao articleDao;
 
-  @Autowired
-  ArticleUtils articleUtils;
+  private final ArticleUtils articleUtils;
 
-  @Autowired
-  Utils utils;
+  private final CurrentUserUtils currentUserUtils;
+
 
   private TagDto convertTagToDto(Tag tag) {
     if (tag == null) {
@@ -113,7 +112,7 @@ public class ArticleService {
 
   public Integer delete(Integer id) {
     Article article = articleDao.findOne(id);
-    JwtUser user = utils.getCurrentUser();
+    TokenUser user = currentUserUtils.getCurrent();
     if (user.getId() != article.getAuthor().getId()) {
       // 当前用户不是作者
       throw new BaseException("1005", "权限不足");

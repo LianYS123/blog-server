@@ -25,9 +25,6 @@ public class ResourceController {
   @Autowired
   ResourceService resourceService;
 
-  @Autowired
-  Utils utils;
-
   @GetMapping("/list")
   public Result list(@Validated PageParamDto dictQuery) {
     return Result.ofSuccess(resourceService.list(dictQuery));
@@ -35,8 +32,8 @@ public class ResourceController {
 
   @PostMapping
   public Result add(@Validated @RequestBody ResourceDto resource) {
-    resource.setCreateTime(utils.getCurrentTime());
-    resource.setUpdateTime(utils.getCurrentTime());
+    resource.setCreateTime(Utils.getCurrentTime());
+    resource.setUpdateTime(Utils.getCurrentTime());
     Integer id = resourceService.add(resource);
     return Result.ofSuccess(id);
   }
@@ -44,7 +41,7 @@ public class ResourceController {
   @PutMapping("/{id}")
   public Result update(@PathVariable(required = true) Integer id, @Validated @RequestBody ResourceDto resource) {
     resource.setId(id);
-    resource.setUpdateTime(utils.getCurrentTime());
+    resource.setUpdateTime(Utils.getCurrentTime());
     resourceService.update(resource);
     return Result.ofSuccess(id);
   }

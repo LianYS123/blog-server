@@ -22,7 +22,7 @@ public class AuthControllerTest {
   void testLogin() throws Exception {
     JSONObject params = new JSONObject();
     params.put("username", "lys");
-    params.put("password", "tb1766318380");
+    params.put("password", "Tb1766318380");
     mvc.perform(MockMvcRequestBuilders.post("/auth/login")
         .content(params.toJSONString())
         .contentType(MediaType.APPLICATION_JSON))

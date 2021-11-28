@@ -5,7 +5,9 @@ import fun.lianys.blogserver.model.dto.AddArticleDto;
 import fun.lianys.blogserver.model.dto.ArticleQueryDto;
 import fun.lianys.blogserver.model.dto.EditArticleDto;
 import fun.lianys.blogserver.service.ArticleService;
+import fun.lianys.blogserver.utils.CurrentUserUtils;
 import fun.lianys.blogserver.utils.Utils;
+import lombok.RequiredArgsConstructor;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -20,16 +22,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/article")
+@RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class ArticleController {
 
-    @Autowired
-    ArticleService articleService;
+    private final ArticleService articleService;
 
-    @Autowired
-    Utils utils;
+    private final CurrentUserUtils currentUserUtils;
+
+    @GetMapping("/test")
+    public Result test() {
+        return Result.ofSuccess(null);
+    }
 
     @GetMapping("/detail/{id}")
-    public Result get(@PathVariable Integer id){
+    public Result get(@PathVariable Integer id) {
         return Result.ofSuccess(articleService.findOne(id));
     }
 
@@ -40,19 +46,20 @@ public class ArticleController {
 
     @PostMapping
     public Result add(@Validated @RequestBody AddArticleDto article) {
-        article.setCreateTime(utils.getCurrentTime());
-        article.setUpdateTime(utils.getCurrentTime());
-        article.setAuthor(utils.getCurrentUser().getId());
+        article.setCreateTime(Utils.getCurrentTime());
+        article.setUpdateTime(Utils.getCurrentTime());
+        article.setAuthor(currentUserUtils.getId());
         Integer id = articleService.add(article);
         return Result.ofSuccess(id);
     }
 
     @PutMapping
     public Result update(@Validated @RequestBody EditArticleDto article) {
-        article.setUpdateTime(utils.getCurrentTime());
+        article.setUpdateTime(Utils.getCurrentTime());
         Integer id = articleService.update(article);
         return Result.ofSuccess(id);
     }
+
     @DeleteMapping("/{id}")
     public Result delete(@PathVariable Integer id) {
         return Result.ofSuccess(articleService.delete(id));
