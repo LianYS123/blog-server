@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 public class UserInfoVO {
     private Integer id;
     private String username;
+    private String avatar;
     private Integer createTime;
     private Integer updateTime;
 }

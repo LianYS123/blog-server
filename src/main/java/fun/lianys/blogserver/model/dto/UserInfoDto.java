@@ -1,13 +1,13 @@
-package fun.lianys.blogserver.model.entity;
+package fun.lianys.blogserver.model.dto;
 
-import org.apache.ibatis.type.Alias;
+import javax.validation.constraints.NotBlank;
 
 import lombok.Data;
 
 @Data
-@Alias("user")
-public class User {
+public class UserInfoDto {
     private Integer id;
+    @NotBlank
     private String username;
     private String password;
     private String avatar;

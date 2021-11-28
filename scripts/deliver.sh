@@ -18,7 +18,8 @@ then
   if [ $? -eq 0 ]
     # run
     jarName="${NAME}-${VERSION}.jar"
-    then ssh lian "cd javaspace/blog && jar -xf $jarName && nohup bash -c 'exec -a blogserver java org.springframework.boot.loader.JarLauncher &'"
+    then ssh lian "cd javaspace/blog && jar -xf $jarName && nohup zsh -c 'exec -a blogserver java org.springframework.boot.loader.JarLauncher &'"
+    # then ssh lian "cd javaspace/blog && jar -xf $jarName && nohup java org.springframework.boot.loader.JarLauncher &"
   fi
 fi
 set +x;

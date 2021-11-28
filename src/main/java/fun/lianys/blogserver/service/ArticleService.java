@@ -71,14 +71,16 @@ public class ArticleService {
   }
 
   public PageInfo<ArticleVO> list(ArticleQueryDto article) {
-    Page<Article> p = PageHelper.startPage(article.getPage(), article.getPageSize());
-    articleDao.list(article);
+    PageHelper.startPage(article.getPage(), article.getPageSize());
+    List<Article> list = articleDao.list(article);
+    PageInfo pageInfo = new PageInfo(list);
     List<ArticleVO> voList = new ArrayList<>();
-    for (Article a : p.getResult()) {
+    for (Article a : list) {
       voList.add(convertArticleToArticleVO(a));
     }
-    System.out.println(voList.stream().map((ArticleVO vo) -> vo.getArticleName()).toList());
-    return new PageInfo<ArticleVO>(voList);
+    pageInfo.setList(voList);
+    // System.out.println(voList.stream().map((ArticleVO vo) -> vo.getArticleName()).toList());
+    return pageInfo;
   }
 
   public ArticleDetailVO findOne(Integer id) {
