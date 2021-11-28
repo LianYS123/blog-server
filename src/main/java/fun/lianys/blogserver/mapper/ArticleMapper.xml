@@ -7,6 +7,7 @@
   <resultMap id="userResultMap" type="user">
     <id property="id" column="user_id" />
     <result property="username" column="username" />
+    <result property="avatar" column="avatar" />
   </resultMap>
   <resultMap id="tagResultMap" type="tag">
     <id property="id" column="tag_id" />
@@ -48,7 +49,8 @@
     A.update_time as update_time,
 
     U.id as user_id, 
-    U.username as username
+    U.username as username,
+    U.avatar as avatar
 
     <!-- T.id as tag_id,
     T.tag_name as tag_name,

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="fun.lianys.blogserver.dao.EssayDao">
+
+  <resultMap id="userResultMap" type="user">
+    <id property="id" column="user_id" />
+    <result property="username" column="username" />
+    <result property="avatar" column="avatar" />
+  </resultMap>
+
+  <resultMap id="essayResultMap" type="essay">
+    <id property="id" column="essay_id" />
+    <result property="html" column="html" />
+    <result property="raw" column="raw" />
+    <result property="createTime" column="create_time" />
+    <result property="updateTime" column="update_time" />
+
+    <association property="author" resultMap="userResultMap" />
+  </resultMap>
+
+  <select id="list" resultMap="essayResultMap">
+    select
+    E.id as essay_id,
+    html,
+    raw,
+    E.create_time as create_time,
+    E.update_time as update_time,
+
+    U.id as user_id, 
+    U.username as username,
+    U.avatar as avatar
+
+    from essay E 
+    left outer join user U on E.author=U.id
+    <where>
+      <if test="keyword != null and keyword != ''">
+        ( `key` like concat(#{keyword} "%") or `value` like concat(#{keyword} "%") )
+      </if>
+    </where>
+  </select>
+</mapper>
