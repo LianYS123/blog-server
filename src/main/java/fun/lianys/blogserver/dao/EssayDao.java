@@ -20,7 +20,7 @@ public interface EssayDao {
     @Options(useGeneratedKeys = true, keyProperty = "id", keyColumn = "id")
     public Integer add(EssayDto essay);
 
-    @Update("update essay set html=#{html}, raw=#{raw}, cover=#{cover}, update_time=#{updateTime} where id=#{id}")
+    @Update("update essay set html=#{html}, raw=#{raw}, update_time=#{updateTime} where id=#{id}")
     @Options(useGeneratedKeys = true, keyProperty = "id", keyColumn = "id")
     public Integer update(EssayDto essay);
 
