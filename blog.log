@@ -1,56 +1,10 @@
-2021-11-30 17:19:43.900  INFO 34516 --- [restartedMain] f.l.blogserver.BlogServerApplication     : Starting BlogServerApplication using Java 17 on lianyongshengdeMacBook-Air.local with PID 34516 (/Users/lianyongsheng/IdeaProjects/blog-server/target/classes started by lianyongsheng in /Users/lianyongsheng/IdeaProjects/blog-server)
-2021-11-30 17:19:43.906  INFO 34516 --- [restartedMain] f.l.blogserver.BlogServerApplication     : No active profile set, falling back to default profiles: default
-2021-11-30 17:19:44.030  INFO 34516 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in /Users/lianyongsheng/.m2/repository/org/htmlparser/htmlparser/2.1/htmlparser-2.1.jar referenced one or more files that do not exist: file:/Users/lianyongsheng/.m2/repository/org/htmlparser/htmlparser/2.1/sax-2.0.1.jar,file:/Users/lianyongsheng/.m2/repository/org/htmlparser/htmlparser/2.1/htmllexer-2.1.jar
-2021-11-30 17:19:44.030  INFO 34516 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-11-30 17:19:44.030  INFO 34516 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-11-30 17:19:45.779  INFO 34516 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-11-30 17:19:45.783  INFO 34516 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-11-30 17:19:45.850  INFO 34516 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 0 Redis repository interfaces.
-2021-11-30 17:19:47.204  INFO 34516 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
-2021-11-30 17:19:47.221  INFO 34516 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-11-30 17:19:47.222  INFO 34516 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
-2021-11-30 17:19:47.345  INFO 34516 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
-2021-11-30 17:19:47.346  INFO 34516 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3315 ms
-2021-11-30 17:19:47.668  INFO 34516 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 5377c51f-ea7a-4930-ba8b-c9f9559ebcef
-
-2021-11-30 17:19:49.542  INFO 34516 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-11-30 17:19:50.184  INFO 34516 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3bb0b1ad, org.springframework.security.web.context.SecurityContextPersistenceFilter@6625737, org.springframework.security.web.header.HeaderWriterFilter@5356e3db, org.springframework.web.filter.CorsFilter@2bf24266, fun.lianys.blogserver.config.JwtAuthenticationFilter@4a844461, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@39e723bb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@51c7dedf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@249134af, org.springframework.security.web.session.SessionManagementFilter@61a3f50e, org.springframework.security.web.access.ExceptionTranslationFilter@6ab3d9d8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@406da9c3]
-2021-11-30 17:19:50.357  INFO 34516 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path '/api'
-2021-11-30 17:19:51.527  INFO 34516 --- [restartedMain] f.l.blogserver.BlogServerApplication     : Started BlogServerApplication in 8.557 seconds (JVM running for 9.338)
-2021-11-30 17:28:43.118  INFO 34516 --- [http-nio-8090-exec-3] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1637723217,1637805048,1637892597; acc=28ad546b2ae4441d9afb29a960c60caf] that contained an invalid cookie. That cookie will be ignored.
- Note: further occurrences of this error will be logged at DEBUG level.
-2021-11-30 17:28:43.160  INFO 34516 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-11-30 17:28:43.172  INFO 34516 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-11-30 17:28:43.208  INFO 34516 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 31 ms
-2021-11-30 17:28:43.745  INFO 34516 --- [http-nio-8090-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-11-30 17:28:44.391  INFO 34516 --- [http-nio-8090-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-11-30 17:33:37.190 ERROR 34516 --- [http-nio-8090-exec-4] f.l.b.handler.MyExceptionHandler         : 【Exception】:nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'cover' in 'class fun.lianys.blogserver.model.dto.EssayDto'
-2021-11-30 17:33:37.204  WARN 34516 --- [http-nio-8090-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'cover' in 'class fun.lianys.blogserver.model.dto.EssayDto']
-2021-11-30 17:34:27.172  INFO 34516 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-11-30 17:34:27.232  INFO 34516 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-11-30 17:34:27.701  INFO 34516 --- [restartedMain] f.l.blogserver.BlogServerApplication     : Starting BlogServerApplication using Java 17 on lianyongshengdeMacBook-Air.local with PID 34516 (/Users/lianyongsheng/IdeaProjects/blog-server/target/classes started by lianyongsheng in /Users/lianyongsheng/IdeaProjects/blog-server)
-2021-11-30 17:34:27.707  INFO 34516 --- [restartedMain] f.l.blogserver.BlogServerApplication     : No active profile set, falling back to default profiles: default
-2021-11-30 17:34:28.426  INFO 34516 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2021-11-30 17:34:28.430  INFO 34516 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2021-11-30 17:34:28.450  INFO 34516 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
-2021-11-30 17:34:28.723  INFO 34516 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
-2021-11-30 17:34:28.728  INFO 34516 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-11-30 17:34:28.729  INFO 34516 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
-2021-11-30 17:34:28.762  INFO 34516 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
-2021-11-30 17:34:28.762  INFO 34516 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1029 ms
-2021-11-30 17:34:28.876  INFO 34516 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 59311084-517c-4770-9f14-2c6f387892f4
-
-2021-11-30 17:34:29.362  INFO 34516 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-11-30 17:34:29.464  INFO 34516 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3a7e41d9, org.springframework.security.web.context.SecurityContextPersistenceFilter@27b54231, org.springframework.security.web.header.HeaderWriterFilter@428a3f28, org.springframework.web.filter.CorsFilter@44dc1dfc, fun.lianys.blogserver.config.JwtAuthenticationFilter@68fab561, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a73419d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@69134284, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7b50da54, org.springframework.security.web.session.SessionManagementFilter@4158adbf, org.springframework.security.web.access.ExceptionTranslationFilter@30fdacc6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@25a6c3e1]
-2021-11-30 17:34:29.499  INFO 34516 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path '/api'
-2021-11-30 17:34:29.933  INFO 34516 --- [restartedMain] f.l.blogserver.BlogServerApplication     : Started BlogServerApplication in 2.545 seconds (JVM running for 887.761)
-2021-11-30 17:34:29.949  INFO 34516 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2021-11-30 17:34:33.919  INFO 34516 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-11-30 17:34:33.921  INFO 34516 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-11-30 17:34:33.926  INFO 34516 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2021-11-30 17:34:34.016  INFO 34516 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2021-11-30 17:34:34.205  INFO 34516 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-12-06 01:10:51.414  WARN 77122 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h40m735ms).
+2021-12-06 02:34:43.583  WARN 77122 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h23m52s166ms).
+2021-12-06 04:11:21.890  WARN 77122 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h36m38s310ms).
+2021-12-06 05:32:07.541  WARN 77122 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h20m45s644ms).
+2021-12-06 06:39:16.268  WARN 77122 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h7m8s734ms).
+2021-12-06 06:55:11.255  WARN 77122 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m54s987ms).
+2021-12-06 08:16:29.378  WARN 77122 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h21m18s119ms).
+2021-12-06 09:10:24.914  WARN 77122 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53m55s525ms).
+2021-12-06 09:43:04.993  WARN 77122 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=32m40s89ms).
+2021-12-06 09:44:18.353  WARN 77122 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m13s363ms).

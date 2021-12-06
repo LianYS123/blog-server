@@ -40,5 +40,8 @@
         ( `key` like concat(#{keyword} "%") or `value` like concat(#{keyword} "%") )
       </if>
     </where>
+    <if test="order != null and orderType">
+        order by ${order} ${orderType}
+    </if>
   </select>
 </mapper>
