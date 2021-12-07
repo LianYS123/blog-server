@@ -1,10 +1,391 @@
-2021-12-06 01:10:51.414  WARN 77122 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h40m735ms).
-2021-12-06 02:34:43.583  WARN 77122 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h23m52s166ms).
-2021-12-06 04:11:21.890  WARN 77122 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h36m38s310ms).
-2021-12-06 05:32:07.541  WARN 77122 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h20m45s644ms).
-2021-12-06 06:39:16.268  WARN 77122 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h7m8s734ms).
-2021-12-06 06:55:11.255  WARN 77122 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m54s987ms).
-2021-12-06 08:16:29.378  WARN 77122 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h21m18s119ms).
-2021-12-06 09:10:24.914  WARN 77122 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53m55s525ms).
-2021-12-06 09:43:04.993  WARN 77122 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=32m40s89ms).
-2021-12-06 09:44:18.353  WARN 77122 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m13s363ms).
+2021-12-07 10:54:49.365  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : Starting BlogServerApplication using Java 17 on lianyongshengdeMacBook-Air.local with PID 77122 (/Users/lianyongsheng/IdeaProjects/blog-server/target/classes started by lianyongsheng in /Users/lianyongsheng/IdeaProjects/blog-server)
+2021-12-07 10:54:49.413  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : No active profile set, falling back to default profiles: default
+2021-12-07 10:54:50.428  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-12-07 10:54:50.438  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-12-07 10:54:50.471  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
+2021-12-07 10:54:50.856  INFO 77122 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-12-07 10:54:50.869  INFO 77122 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-07 10:54:50.870  INFO 77122 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-12-07 10:54:50.906  INFO 77122 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/api]  : Initializing Spring embedded WebApplicationContext
+2021-12-07 10:54:50.907  INFO 77122 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1437 ms
+2021-12-07 10:54:51.054  INFO 77122 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 3ac9283e-136c-4f2e-bb29-b10097aba916
+
+2021-12-07 10:54:51.812  INFO 77122 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-07 10:54:51.916  INFO 77122 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@315462b0, org.springframework.security.web.context.SecurityContextPersistenceFilter@4d8d2f6e, org.springframework.security.web.header.HeaderWriterFilter@64619499, org.springframework.web.filter.CorsFilter@11062554, fun.lianys.blogserver.config.JwtAuthenticationFilter@546c7f60, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7ad2c394, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@127f450b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d1addae, org.springframework.security.web.session.SessionManagementFilter@4853a05a, org.springframework.security.web.access.ExceptionTranslationFilter@26023d46, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1f66d734]
+2021-12-07 10:54:51.947  INFO 77122 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path '/api'
+2021-12-07 10:54:52.370  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : Started BlogServerApplication in 3.401 seconds (JVM running for 49479.984)
+2021-12-07 10:54:52.375  INFO 77122 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-12-07 11:01:10.384  INFO 77122 --- [http-nio-8090-exec-2] o.a.c.c.C.[Tomcat-1].[localhost].[/api]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-07 11:01:10.411  INFO 77122 --- [http-nio-8090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-07 11:01:10.438  INFO 77122 --- [http-nio-8090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 26 ms
+2021-12-07 11:01:10.781  INFO 77122 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2021-12-07 11:01:11.185  INFO 77122 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2021-12-07 11:14:20.994  INFO 77122 --- [http-nio-8090-exec-3] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1637805048,1637892597,1638326850; acc=67d9603204c643fabab96fb8b03e097c] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2021-12-07 11:14:20.994  INFO 77122 --- [http-nio-8090-exec-8] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1637805048,1637892597,1638326850; acc=67d9603204c643fabab96fb8b03e097c] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2021-12-07 11:14:20.994  INFO 77122 --- [http-nio-8090-exec-10] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1637805048,1637892597,1638326850; acc=67d9603204c643fabab96fb8b03e097c] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2021-12-07 11:40:55.054  INFO 77122 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2021-12-07 11:40:55.296  INFO 77122 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2021-12-07 11:40:55.744  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : Starting BlogServerApplication using Java 17 on lianyongshengdeMacBook-Air.local with PID 77122 (/Users/lianyongsheng/IdeaProjects/blog-server/target/classes started by lianyongsheng in /Users/lianyongsheng/IdeaProjects/blog-server)
+2021-12-07 11:40:55.747  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : No active profile set, falling back to default profiles: default
+2021-12-07 11:40:56.420  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-12-07 11:40:56.427  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-12-07 11:40:56.470  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 0 Redis repository interfaces.
+2021-12-07 11:40:56.792  INFO 77122 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-12-07 11:40:56.797  INFO 77122 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-07 11:40:56.797  INFO 77122 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-12-07 11:40:56.830  INFO 77122 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/api]  : Initializing Spring embedded WebApplicationContext
+2021-12-07 11:40:56.830  INFO 77122 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1061 ms
+2021-12-07 11:40:56.915  INFO 77122 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 87fe9e48-33cb-4bf9-93b1-09716102273b
+
+2021-12-07 11:40:57.068  WARN 77122 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleController' defined in file [/Users/lianyongsheng/IdeaProjects/blog-server/target/classes/fun/lianys/blogserver/controllers/ArticleController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleService' defined in file [/Users/lianyongsheng/IdeaProjects/blog-server/target/classes/fun/lianys/blogserver/service/ArticleService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleDao' defined in file [/Users/lianyongsheng/IdeaProjects/blog-server/target/classes/fun/lianys/blogserver/dao/ArticleDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/lianyongsheng/IdeaProjects/blog-server/target/classes/fun/lianys/blogserver/mapper/UserMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for fun.lianys.blogserver.dao.UserDao.updateUserInfo. please check file [/Users/lianyongsheng/IdeaProjects/blog-server/target/classes/fun/lianys/blogserver/mapper/UserMapper.xml] and fun/lianys/blogserver/dao/UserDao.java (best guess)
+2021-12-07 11:40:57.113  INFO 77122 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-12-07 11:40:57.142  INFO 77122 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-12-07 11:40:57.153 ERROR 77122 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleController' defined in file [/Users/lianyongsheng/IdeaProjects/blog-server/target/classes/fun/lianys/blogserver/controllers/ArticleController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleService' defined in file [/Users/lianyongsheng/IdeaProjects/blog-server/target/classes/fun/lianys/blogserver/service/ArticleService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleDao' defined in file [/Users/lianyongsheng/IdeaProjects/blog-server/target/classes/fun/lianys/blogserver/dao/ArticleDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/lianyongsheng/IdeaProjects/blog-server/target/classes/fun/lianys/blogserver/mapper/UserMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for fun.lianys.blogserver.dao.UserDao.updateUserInfo. please check file [/Users/lianyongsheng/IdeaProjects/blog-server/target/classes/fun/lianys/blogserver/mapper/UserMapper.xml] and fun/lianys/blogserver/dao/UserDao.java (best guess)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.10.jar:5.3.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.10.jar:5.3.10]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-2.5.5.jar:2.5.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) ~[spring-boot-2.5.5.jar:2.5.5]
+	at fun.lianys.blogserver.BlogServerApplication.main(BlogServerApplication.java:13) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.5.5.jar:2.5.5]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleService' defined in file [/Users/lianyongsheng/IdeaProjects/blog-server/target/classes/fun/lianys/blogserver/service/ArticleService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleDao' defined in file [/Users/lianyongsheng/IdeaProjects/blog-server/target/classes/fun/lianys/blogserver/dao/ArticleDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/lianyongsheng/IdeaProjects/blog-server/target/classes/fun/lianys/blogserver/mapper/UserMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for fun.lianys.blogserver.dao.UserDao.updateUserInfo. please check file [/Users/lianyongsheng/IdeaProjects/blog-server/target/classes/fun/lianys/blogserver/mapper/UserMapper.xml] and fun/lianys/blogserver/dao/UserDao.java (best guess)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.10.jar:5.3.10]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'articleDao' defined in file [/Users/lianyongsheng/IdeaProjects/blog-server/target/classes/fun/lianys/blogserver/dao/ArticleDao.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/lianyongsheng/IdeaProjects/blog-server/target/classes/fun/lianys/blogserver/mapper/UserMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for fun.lianys.blogserver.dao.UserDao.updateUserInfo. please check file [/Users/lianyongsheng/IdeaProjects/blog-server/target/classes/fun/lianys/blogserver/mapper/UserMapper.xml] and fun/lianys/blogserver/dao/UserDao.java (best guess)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1534) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1417) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.10.jar:5.3.10]
+	... 38 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/lianyongsheng/IdeaProjects/blog-server/target/classes/fun/lianys/blogserver/mapper/UserMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for fun.lianys.blogserver.dao.UserDao.updateUserInfo. please check file [/Users/lianyongsheng/IdeaProjects/blog-server/target/classes/fun/lianys/blogserver/mapper/UserMapper.xml] and fun/lianys/blogserver/dao/UserDao.java (best guess)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1380) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1519) ~[spring-beans-5.3.10.jar:5.3.10]
+	... 50 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/lianyongsheng/IdeaProjects/blog-server/target/classes/fun/lianys/blogserver/mapper/UserMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for fun.lianys.blogserver.dao.UserDao.updateUserInfo. please check file [/Users/lianyongsheng/IdeaProjects/blog-server/target/classes/fun/lianys/blogserver/mapper/UserMapper.xml] and fun/lianys/blogserver/dao/UserDao.java (best guess)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.10.jar:5.3.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.10.jar:5.3.10]
+	... 63 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/lianyongsheng/IdeaProjects/blog-server/target/classes/fun/lianys/blogserver/mapper/UserMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Mapped Statements collection already contains value for fun.lianys.blogserver.dao.UserDao.updateUserInfo. please check file [/Users/lianyongsheng/IdeaProjects/blog-server/target/classes/fun/lianys/blogserver/mapper/UserMapper.xml] and fun/lianys/blogserver/dao/UserDao.java (best guess)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:613) ~[mybatis-spring-2.0.6.jar:2.0.6]
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:491) ~[mybatis-spring-2.0.6.jar:2.0.6]
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:633) ~[mybatis-spring-2.0.6.jar:2.0.6]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:179) ~[mybatis-spring-boot-autoconfigure-2.2.0.jar:2.2.0]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$b9e3dd27.CGLIB$sqlSessionFactory$1(<generated>) ~[mybatis-spring-boot-autoconfigure-2.2.0.jar:2.2.0]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$b9e3dd27$$FastClassBySpringCGLIB$$9b8ad38.invoke(<generated>) ~[mybatis-spring-boot-autoconfigure-2.2.0.jar:2.2.0]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.10.jar:5.3.10]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.10.jar:5.3.10]
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$b9e3dd27.sqlSessionFactory(<generated>) ~[mybatis-spring-boot-autoconfigure-2.2.0.jar:2.2.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.10.jar:5.3.10]
+	... 64 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Mapped Statements collection already contains value for fun.lianys.blogserver.dao.UserDao.updateUserInfo. please check file [/Users/lianyongsheng/IdeaProjects/blog-server/target/classes/fun/lianys/blogserver/mapper/UserMapper.xml] and fun/lianys/blogserver/dao/UserDao.java (best guess)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:1014) ~[mybatis-3.5.7.jar:3.5.7]
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:970) ~[mybatis-3.5.7.jar:3.5.7]
+	at org.apache.ibatis.session.Configuration.addMappedStatement(Configuration.java:768) ~[mybatis-3.5.7.jar:3.5.7]
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:297) ~[mybatis-3.5.7.jar:3.5.7]
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.lambda$parseStatement$2(MapperAnnotationBuilder.java:358) ~[mybatis-3.5.7.jar:3.5.7]
+	at java.base/java.util.Optional.ifPresent(Optional.java:178) ~[na:na]
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseStatement(MapperAnnotationBuilder.java:300) ~[mybatis-3.5.7.jar:3.5.7]
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:132) ~[mybatis-3.5.7.jar:3.5.7]
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72) ~[mybatis-3.5.7.jar:3.5.7]
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:841) ~[mybatis-3.5.7.jar:3.5.7]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.bindMapperForNamespace(XMLMapperBuilder.java:432) ~[mybatis-3.5.7.jar:3.5.7]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:97) ~[mybatis-3.5.7.jar:3.5.7]
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:611) ~[mybatis-spring-2.0.6.jar:2.0.6]
+	... 77 common frames omitted
+
+2021-12-07 11:41:15.066  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : Starting BlogServerApplication using Java 17 on lianyongshengdeMacBook-Air.local with PID 77122 (/Users/lianyongsheng/IdeaProjects/blog-server/target/classes started by lianyongsheng in /Users/lianyongsheng/IdeaProjects/blog-server)
+2021-12-07 11:41:15.072  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : No active profile set, falling back to default profiles: default
+2021-12-07 11:41:15.438  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-12-07 11:41:15.438  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-12-07 11:41:15.450  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2021-12-07 11:41:15.607  INFO 77122 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-12-07 11:41:15.611  INFO 77122 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-07 11:41:15.612  INFO 77122 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-12-07 11:41:15.697  INFO 77122 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/api]  : Initializing Spring embedded WebApplicationContext
+2021-12-07 11:41:15.702  INFO 77122 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 618 ms
+2021-12-07 11:41:15.846  INFO 77122 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f63414c6-3d84-4597-a9bb-f9cf564c68ba
+
+2021-12-07 11:41:16.338  INFO 77122 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-07 11:41:16.468  INFO 77122 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2972aa27, org.springframework.security.web.context.SecurityContextPersistenceFilter@5d6e2bfa, org.springframework.security.web.header.HeaderWriterFilter@62634db0, org.springframework.web.filter.CorsFilter@20219111, fun.lianys.blogserver.config.JwtAuthenticationFilter@7dfbcba3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@883381e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7075fa73, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8406ef2, org.springframework.security.web.session.SessionManagementFilter@5f2f47c1, org.springframework.security.web.access.ExceptionTranslationFilter@2affe8e9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@46e241a]
+2021-12-07 11:41:16.497  INFO 77122 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path '/api'
+2021-12-07 11:41:16.843  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : Started BlogServerApplication in 1.937 seconds (JVM running for 52264.485)
+2021-12-07 11:41:16.848  INFO 77122 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-12-07 11:43:01.315  INFO 77122 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat-2].[localhost].[/api]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-07 11:43:01.320  INFO 77122 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-07 11:43:01.331  INFO 77122 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2021-12-07 11:43:01.483  INFO 77122 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2021-12-07 11:43:01.656  INFO 77122 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2021-12-07 12:15:14.823  WARN 77122 --- [HikariPool-4 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=5m42s865ms).
+2021-12-07 12:33:28.674  WARN 77122 --- [HikariPool-4 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=17m43s592ms).
+2021-12-07 12:49:57.065  WARN 77122 --- [HikariPool-4 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=15m58s354ms).
+2021-12-07 13:33:31.889  WARN 77122 --- [HikariPool-4 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=43m4s441ms).
+2021-12-07 13:58:48.930  INFO 77122 --- [Thread-36] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2021-12-07 13:58:49.081  INFO 77122 --- [Thread-36] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2021-12-07 13:58:49.979  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : Starting BlogServerApplication using Java 17 on lianyongshengdeMacBook-Air.local with PID 77122 (/Users/lianyongsheng/IdeaProjects/blog-server/target/classes started by lianyongsheng in /Users/lianyongsheng/IdeaProjects/blog-server)
+2021-12-07 13:58:49.999  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : No active profile set, falling back to default profiles: default
+2021-12-07 13:58:50.671  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-12-07 13:58:50.673  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-12-07 13:58:50.688  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2021-12-07 13:58:51.216  INFO 77122 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-12-07 13:58:51.232  INFO 77122 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-07 13:58:51.233  INFO 77122 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-12-07 13:58:51.268  INFO 77122 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/api]  : Initializing Spring embedded WebApplicationContext
+2021-12-07 13:58:51.268  INFO 77122 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1228 ms
+2021-12-07 13:58:51.462  INFO 77122 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 95dcefb2-96cb-4a13-8b87-eb6088be8123
+
+2021-12-07 13:58:51.906  INFO 77122 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-07 13:58:51.990  INFO 77122 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e1d8ea3, org.springframework.security.web.context.SecurityContextPersistenceFilter@c407c29, org.springframework.security.web.header.HeaderWriterFilter@40fdb2cf, org.springframework.web.filter.CorsFilter@2d08f18c, fun.lianys.blogserver.config.JwtAuthenticationFilter@6aef26aa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@50f91227, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d3fb93d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6cf0ffb7, org.springframework.security.web.session.SessionManagementFilter@2de99a13, org.springframework.security.web.access.ExceptionTranslationFilter@73b5ea0c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2fb5359d]
+2021-12-07 13:58:52.017  INFO 77122 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path '/api'
+2021-12-07 13:58:52.720  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : Started BlogServerApplication in 3.185 seconds (JVM running for 55691.399)
+2021-12-07 13:58:52.736  INFO 77122 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-12-07 14:00:31.964  INFO 77122 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat-2].[localhost].[/api]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-07 14:00:31.971  INFO 77122 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-07 14:00:31.983  INFO 77122 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2021-12-07 14:00:32.158  INFO 77122 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2021-12-07 14:00:32.401  INFO 77122 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2021-12-07 14:31:43.010  INFO 77122 --- [Thread-44] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2021-12-07 14:31:43.092  INFO 77122 --- [Thread-44] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2021-12-07 14:31:43.654  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : Starting BlogServerApplication using Java 17 on lianyongshengdeMacBook-Air.local with PID 77122 (/Users/lianyongsheng/IdeaProjects/blog-server/target/classes started by lianyongsheng in /Users/lianyongsheng/IdeaProjects/blog-server)
+2021-12-07 14:31:43.661  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : No active profile set, falling back to default profiles: default
+2021-12-07 14:31:44.226  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-12-07 14:31:44.227  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-12-07 14:31:44.252  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2021-12-07 14:31:44.667  INFO 77122 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-12-07 14:31:44.677  INFO 77122 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-07 14:31:44.677  INFO 77122 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-12-07 14:31:44.700  INFO 77122 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/api]  : Initializing Spring embedded WebApplicationContext
+2021-12-07 14:31:44.700  INFO 77122 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1016 ms
+2021-12-07 14:31:44.773  INFO 77122 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 709777c8-58aa-4a34-96e4-3ceddec29e84
+
+2021-12-07 14:31:45.129  INFO 77122 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-07 14:31:45.223  INFO 77122 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@50bea6ac, org.springframework.security.web.context.SecurityContextPersistenceFilter@310d7c90, org.springframework.security.web.header.HeaderWriterFilter@38709d38, org.springframework.web.filter.CorsFilter@2f51dc5d, fun.lianys.blogserver.config.JwtAuthenticationFilter@b546903, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@d3fb3b1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@319a6673, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7e2c193f, org.springframework.security.web.session.SessionManagementFilter@600ef473, org.springframework.security.web.access.ExceptionTranslationFilter@3f706fd7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@30e8acaa]
+2021-12-07 14:31:45.247  INFO 77122 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path '/api'
+2021-12-07 14:31:45.719  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : Started BlogServerApplication in 2.275 seconds (JVM running for 57664.46)
+2021-12-07 14:31:45.732  INFO 77122 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-12-07 14:32:19.579  INFO 77122 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat-2].[localhost].[/api]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-07 14:32:19.581  INFO 77122 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-07 14:32:19.590  INFO 77122 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2021-12-07 14:32:19.731  INFO 77122 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2021-12-07 14:32:19.828  INFO 77122 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2021-12-07 14:33:35.702  INFO 77122 --- [Thread-49] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2021-12-07 14:33:35.721  INFO 77122 --- [Thread-49] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2021-12-07 14:33:36.160  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : Starting BlogServerApplication using Java 17 on lianyongshengdeMacBook-Air.local with PID 77122 (/Users/lianyongsheng/IdeaProjects/blog-server/target/classes started by lianyongsheng in /Users/lianyongsheng/IdeaProjects/blog-server)
+2021-12-07 14:33:36.165  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : No active profile set, falling back to default profiles: default
+2021-12-07 14:33:36.645  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-12-07 14:33:36.654  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-12-07 14:33:36.698  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 0 Redis repository interfaces.
+2021-12-07 14:33:36.974  INFO 77122 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-12-07 14:33:36.980  INFO 77122 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-07 14:33:36.980  INFO 77122 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-12-07 14:33:37.004  INFO 77122 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/api]  : Initializing Spring embedded WebApplicationContext
+2021-12-07 14:33:37.004  INFO 77122 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 815 ms
+2021-12-07 14:33:37.079  INFO 77122 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: da9c1a11-2d3e-48a4-ba31-f2c216b27504
+
+2021-12-07 14:33:37.400  INFO 77122 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-07 14:33:37.725  INFO 77122 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1dcd1c41, org.springframework.security.web.context.SecurityContextPersistenceFilter@73004551, org.springframework.security.web.header.HeaderWriterFilter@1f607daf, org.springframework.web.filter.CorsFilter@37dca278, fun.lianys.blogserver.config.JwtAuthenticationFilter@14c71548, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d0ea34f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@611f2444, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4b1558ee, org.springframework.security.web.session.SessionManagementFilter@16546d75, org.springframework.security.web.access.ExceptionTranslationFilter@2cc45896, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e9e326c]
+2021-12-07 14:33:37.767  INFO 77122 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path '/api'
+2021-12-07 14:33:38.128  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : Started BlogServerApplication in 2.134 seconds (JVM running for 57776.869)
+2021-12-07 14:33:38.134  INFO 77122 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-12-07 14:33:45.511  INFO 77122 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat-2].[localhost].[/api]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-07 14:33:45.514  INFO 77122 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-07 14:33:45.522  INFO 77122 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2021-12-07 14:33:45.656  INFO 77122 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2021-12-07 14:33:45.770  INFO 77122 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2021-12-07 14:36:15.466  INFO 77122 --- [Thread-54] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2021-12-07 14:36:15.491  INFO 77122 --- [Thread-54] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2021-12-07 14:36:15.845  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : Starting BlogServerApplication using Java 17 on lianyongshengdeMacBook-Air.local with PID 77122 (/Users/lianyongsheng/IdeaProjects/blog-server/target/classes started by lianyongsheng in /Users/lianyongsheng/IdeaProjects/blog-server)
+2021-12-07 14:36:15.847  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : No active profile set, falling back to default profiles: default
+2021-12-07 14:36:16.348  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-12-07 14:36:16.354  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-12-07 14:36:16.387  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
+2021-12-07 14:36:16.661  INFO 77122 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-12-07 14:36:16.668  INFO 77122 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-07 14:36:16.668  INFO 77122 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-12-07 14:36:16.692  INFO 77122 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/api]  : Initializing Spring embedded WebApplicationContext
+2021-12-07 14:36:16.692  INFO 77122 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 825 ms
+2021-12-07 14:36:16.761  INFO 77122 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 138c0ef8-939d-4126-9027-49a6f1347fb1
+
+2021-12-07 14:36:17.039  INFO 77122 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-07 14:36:17.270  INFO 77122 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51d60231, org.springframework.security.web.context.SecurityContextPersistenceFilter@39cfbb52, org.springframework.security.web.header.HeaderWriterFilter@61d73df8, org.springframework.web.filter.CorsFilter@a2f2ab8, fun.lianys.blogserver.config.JwtAuthenticationFilter@436af998, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b8f7412, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@23efae66, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3071ea4b, org.springframework.security.web.session.SessionManagementFilter@4a29947d, org.springframework.security.web.access.ExceptionTranslationFilter@5c13d233, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@47368bdd]
+2021-12-07 14:36:17.305  INFO 77122 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path '/api'
+2021-12-07 14:36:17.601  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : Started BlogServerApplication in 1.903 seconds (JVM running for 57936.344)
+2021-12-07 14:36:17.605  INFO 77122 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-12-07 14:36:34.088  INFO 77122 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat-2].[localhost].[/api]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-07 14:36:34.091  INFO 77122 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-07 14:36:34.097  INFO 77122 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2021-12-07 14:36:34.219  INFO 77122 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2021-12-07 14:36:34.321  INFO 77122 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2021-12-07 14:43:47.847  INFO 77122 --- [Thread-59] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2021-12-07 14:43:47.894  INFO 77122 --- [Thread-59] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2021-12-07 14:43:48.290  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : Starting BlogServerApplication using Java 17 on lianyongshengdeMacBook-Air.local with PID 77122 (/Users/lianyongsheng/IdeaProjects/blog-server/target/classes started by lianyongsheng in /Users/lianyongsheng/IdeaProjects/blog-server)
+2021-12-07 14:43:48.294  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : No active profile set, falling back to default profiles: default
+2021-12-07 14:43:48.933  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-12-07 14:43:49.037  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-12-07 14:43:49.126  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 0 Redis repository interfaces.
+2021-12-07 14:43:49.476  INFO 77122 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-12-07 14:43:49.487  INFO 77122 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-07 14:43:49.487  INFO 77122 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-12-07 14:43:49.516  INFO 77122 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/api]  : Initializing Spring embedded WebApplicationContext
+2021-12-07 14:43:49.516  INFO 77122 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1208 ms
+2021-12-07 14:43:49.596  INFO 77122 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 61750965-d371-4b3b-b697-3b01f5974e4f
+
+2021-12-07 14:43:49.862  INFO 77122 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-07 14:43:50.089  INFO 77122 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7e0ba19a, org.springframework.security.web.context.SecurityContextPersistenceFilter@14f02c06, org.springframework.security.web.header.HeaderWriterFilter@14767943, org.springframework.web.filter.CorsFilter@596e8a50, fun.lianys.blogserver.config.JwtAuthenticationFilter@7e1985e8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7933d2f8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5e2800fc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@14301b61, org.springframework.security.web.session.SessionManagementFilter@6af50e6d, org.springframework.security.web.access.ExceptionTranslationFilter@13bfc232, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@56578288]
+2021-12-07 14:43:50.125  INFO 77122 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path '/api'
+2021-12-07 14:43:50.463  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : Started BlogServerApplication in 2.345 seconds (JVM running for 58389.211)
+2021-12-07 14:43:50.469  INFO 77122 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-12-07 14:47:51.842  INFO 77122 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat-2].[localhost].[/api]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-07 14:47:51.858  INFO 77122 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-07 14:47:51.873  INFO 77122 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2021-12-07 14:47:52.186  INFO 77122 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2021-12-07 14:47:52.352  INFO 77122 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2021-12-07 14:47:52.626 ERROR 77122 --- [http-nio-8090-exec-1] f.l.b.handler.MyExceptionHandler         : 【Exception】:
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: Column 'update_time' specified twice
+### The error may exist in file [/Users/lianyongsheng/IdeaProjects/blog-server/target/classes/fun/lianys/blogserver/mapper/UserMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: insert into user      set username=? ,         password=? ,                update_time=? ,         update_time=?
+### Cause: java.sql.SQLSyntaxErrorException: Column 'update_time' specified twice
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Column 'update_time' specified twice
+2021-12-07 14:47:52.672  WARN 77122 --- [http-nio-8090-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: Column 'update_time' specified twice
+### The error may exist in file [/Users/lianyongsheng/IdeaProjects/blog-server/target/classes/fun/lianys/blogserver/mapper/UserMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: insert into user      set username=? ,         password=? ,                update_time=? ,         update_time=?
+### Cause: java.sql.SQLSyntaxErrorException: Column 'update_time' specified twice
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Column 'update_time' specified twice]
+2021-12-07 14:48:52.138  INFO 77122 --- [Thread-64] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2021-12-07 14:48:52.168  INFO 77122 --- [Thread-64] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2021-12-07 14:48:52.528  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : Starting BlogServerApplication using Java 17 on lianyongshengdeMacBook-Air.local with PID 77122 (/Users/lianyongsheng/IdeaProjects/blog-server/target/classes started by lianyongsheng in /Users/lianyongsheng/IdeaProjects/blog-server)
+2021-12-07 14:48:52.531  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : No active profile set, falling back to default profiles: default
+2021-12-07 14:48:52.998  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-12-07 14:48:53.003  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-12-07 14:48:53.037  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 0 Redis repository interfaces.
+2021-12-07 14:48:53.274  INFO 77122 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-12-07 14:48:53.284  INFO 77122 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-07 14:48:53.284  INFO 77122 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-12-07 14:48:53.306  INFO 77122 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/api]  : Initializing Spring embedded WebApplicationContext
+2021-12-07 14:48:53.307  INFO 77122 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 759 ms
+2021-12-07 14:48:53.397  INFO 77122 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 446aa17e-8340-4dff-a782-4d7741013eb9
+
+2021-12-07 14:48:53.796  INFO 77122 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-07 14:48:53.946  INFO 77122 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@373292e8, org.springframework.security.web.context.SecurityContextPersistenceFilter@cf41d7d, org.springframework.security.web.header.HeaderWriterFilter@5fbc329e, org.springframework.web.filter.CorsFilter@4275a6db, fun.lianys.blogserver.config.JwtAuthenticationFilter@2d11132a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@469f3859, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7889cad6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@498fecd0, org.springframework.security.web.session.SessionManagementFilter@5c603cb1, org.springframework.security.web.access.ExceptionTranslationFilter@294c6daf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@22f8c058]
+2021-12-07 14:48:53.977  INFO 77122 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path '/api'
+2021-12-07 14:48:54.242  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : Started BlogServerApplication in 1.856 seconds (JVM running for 58692.993)
+2021-12-07 14:48:54.246  INFO 77122 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-12-07 14:48:59.440  INFO 77122 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat-2].[localhost].[/api]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-07 14:48:59.442  INFO 77122 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-07 14:48:59.448  INFO 77122 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2021-12-07 14:48:59.658  INFO 77122 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2021-12-07 14:48:59.752  INFO 77122 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2021-12-07 14:50:01.998 ERROR 77122 --- [http-nio-8090-exec-6] f.l.b.handler.MyExceptionHandler         : 【Exception】:Request method 'DELETE' not supported
+2021-12-07 14:50:02.031  WARN 77122 --- [http-nio-8090-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported]
+2021-12-07 14:52:06.726  INFO 77122 --- [Thread-69] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2021-12-07 14:52:06.753  INFO 77122 --- [Thread-69] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2021-12-07 14:52:07.314  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : Starting BlogServerApplication using Java 17 on lianyongshengdeMacBook-Air.local with PID 77122 (/Users/lianyongsheng/IdeaProjects/blog-server/target/classes started by lianyongsheng in /Users/lianyongsheng/IdeaProjects/blog-server)
+2021-12-07 14:52:07.322  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : No active profile set, falling back to default profiles: default
+2021-12-07 14:52:07.963  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-12-07 14:52:07.974  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-12-07 14:52:08.034  INFO 77122 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 0 Redis repository interfaces.
+2021-12-07 14:52:08.342  INFO 77122 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-12-07 14:52:08.348  INFO 77122 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-07 14:52:08.349  INFO 77122 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-12-07 14:52:08.374  INFO 77122 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/api]  : Initializing Spring embedded WebApplicationContext
+2021-12-07 14:52:08.374  INFO 77122 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1026 ms
+2021-12-07 14:52:08.483  INFO 77122 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 310f3557-6e09-443a-9004-dd230498a604
+
+2021-12-07 14:52:09.135  INFO 77122 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-12-07 14:52:09.281  INFO 77122 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7566eb73, org.springframework.security.web.context.SecurityContextPersistenceFilter@6e53741e, org.springframework.security.web.header.HeaderWriterFilter@749ee0ab, org.springframework.web.filter.CorsFilter@3b0ecc6, fun.lianys.blogserver.config.JwtAuthenticationFilter@63c0cdc7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@746223b8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77fa0e27, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@236c8d08, org.springframework.security.web.session.SessionManagementFilter@75b4f028, org.springframework.security.web.access.ExceptionTranslationFilter@26e7898d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@280887]
+2021-12-07 14:52:09.311  INFO 77122 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path '/api'
+2021-12-07 14:52:09.633  INFO 77122 --- [restartedMain] f.l.blogserver.BlogServerApplication     : Started BlogServerApplication in 2.558 seconds (JVM running for 58888.386)
+2021-12-07 14:52:09.640  INFO 77122 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-12-07 14:52:23.983  INFO 77122 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat-2].[localhost].[/api]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-07 14:52:23.994  INFO 77122 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-07 14:52:24.004  INFO 77122 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2021-12-07 14:52:24.117  INFO 77122 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2021-12-07 14:52:24.250  INFO 77122 --- [http-nio-8090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
