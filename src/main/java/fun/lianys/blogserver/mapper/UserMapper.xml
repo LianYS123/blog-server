@@ -40,4 +40,14 @@
       <if test="updateTime != null"> update_time=#{updateTime} , </if>
     </trim>
   </insert>
+
+  <insert id="addUserRoles">
+    insert into user_role values
+    <foreach item="roleId" index="index" separator="," collection="roles"> ( #{userId}, #{roleId} ) </foreach>
+  </insert>
+
+  <delete id="deleteAllRoles">
+      delete from user_role where user_id = #{userId}
+  </delete>
+
 </mapper>

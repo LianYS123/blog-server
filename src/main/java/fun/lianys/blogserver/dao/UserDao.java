@@ -29,4 +29,9 @@ public interface UserDao {
     public void updateUserInfo(UserInfoDto dto);
 
     public void changeStatus(Integer id, String status);
+
+    public Integer addUserRoles(Integer userId, Integer[] roles);
+
+    public Integer deleteAllRoles(Integer userId);
+
 }

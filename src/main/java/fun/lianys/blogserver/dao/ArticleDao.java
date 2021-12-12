@@ -31,4 +31,8 @@ public interface ArticleDao {
     public Integer delete(Integer id);
 
     public Integer updateTagBatch(Integer articleId, Integer[] tags);
+
+    public Integer insertTags(Integer articleId, Integer[] tags);
+
+    public Integer deleteAllTags(Integer articleId);
 }

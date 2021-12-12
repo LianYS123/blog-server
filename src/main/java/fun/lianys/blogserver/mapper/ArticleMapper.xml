@@ -93,4 +93,16 @@
     ON DUPLICATE KEY UPDATE article_id = VALUES(article_id), tag_id = VALUES(tag_id);
   </update>
 
+  <insert id="insertTags">
+    insert into article_tag (article_id, tag_id)
+    values
+    <foreach collection="tags" item="item" index="index" separator=",">
+        ( #{articleId}, #{item} )
+    </foreach>
+  </insert>
+
+  <delete id="deleteAllTags">
+    delete from article_tag where article_id=#{articleId}
+  </delete>
+
 </mapper>

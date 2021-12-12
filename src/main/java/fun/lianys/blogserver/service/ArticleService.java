@@ -90,7 +90,8 @@ public class ArticleService {
   public Integer add(AddArticleDto article) {
     articleDao.add(article);
     Integer id = article.getId();
-    updateTags(id, article.getTags());
+    // updateTags(id, article.getTags());
+    articleDao.insertTags(id, article.getTags());
     return id;
   }
 
@@ -101,10 +102,18 @@ public class ArticleService {
     return id;
   }
 
+    // public void insertTags(Integer articleId, Integer[] tags) {
+    //   articleDao.insertTags(articleId, tags);
+    // }
+
   // 批量更新标签
   public Integer updateTags(Integer id, Integer[] tags) {
+    if(tags != null) {
+      articleDao.deleteAllTags(id);
+    }
     if (tags != null && tags.length != 0) {
-      return articleDao.updateTagBatch(id, tags);
+      return articleDao.insertTags(id, tags);
+      // return articleDao.updateTagBatch(id, tags);
     } else {
       return 0;
     }
